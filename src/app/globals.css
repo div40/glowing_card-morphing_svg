@@ -124,3 +124,7 @@
   }
 }
 
+@theme inline {
+  --radius-inherit: inherit;
+}
+
