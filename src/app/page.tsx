@@ -12,6 +12,7 @@ import {
 import { useTheme } from "next-themes";
 import { Check } from "lucide-react";
 import GlowArea, { Glow } from "@/components/glow-area";
+import ThemeToggle from "@/components/theme-toggle";
 
 export default function Home() {
   const { setTheme } = useTheme();
@@ -63,23 +64,8 @@ export default function Home() {
 
   return (
     <div className="container mx-auto py-10 px-4 font-sora">
-      <div className="flex justify-end mb-6">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => setTheme("light")}
-          className="mr-2 cursor-pointer"
-        >
-          Light
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => setTheme("dark")}
-          className={`cursor-pointer`}
-        >
-          Dark
-        </Button>
+      <div className="flex justify-start mb-6">
+        <ThemeToggle />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
