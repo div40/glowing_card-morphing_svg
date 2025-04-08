@@ -86,15 +86,17 @@ export default function Home() {
         {pricingPlans.map((plan) => (
           <GlowArea
             key={plan.name}
-            className="h-full overflow-hidden rounded-xl"
+            className={`h-full overflow-hidden rounded-xl ${
+              plan.name === "Pro" ? "lg:scale-105" : ""
+            }`}
           >
             <Glow color={plan.glowColor} className="h-full rounded-xl">
               <Card className="flex flex-col min-h-full">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold tracking-tight">
+                  <CardTitle className="text-2xl md:text-3xl font-semibold tracking-tight uppercase text-center">
                     {plan.name}
                   </CardTitle>
-                  <CardDescription className="text-sm text-muted-foreground">
+                  <CardDescription className="text-sm text-muted-foreground text-center">
                     {plan.description}
                   </CardDescription>
                 </CardHeader>
