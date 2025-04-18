@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { useTheme } from "next-themes";
 import { Check } from "lucide-react";
 import GlowArea, { Glow } from "@/components/glow-area";
 import ThemeToggle from "@/components/theme-toggle";
