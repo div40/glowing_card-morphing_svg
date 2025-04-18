@@ -1,12 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import {
-  ComponentPropsWithoutRef,
-  CSSProperties,
-  useEffect,
-  useRef,
-} from "react";
+import { ComponentPropsWithoutRef, CSSProperties, useRef } from "react";
 
 interface GlowAreaProps extends ComponentPropsWithoutRef<"div"> {
   size?: number;
@@ -82,17 +77,6 @@ export const Glow = (props: GlowProps) => {
 
   /*calc(var(--glow-x, -99999px) - var(--glow-left, 0px))
   calc(var(--glow-y, -99999px) - var(--glow-top,0px)) sets the glow right underneath the cursor */
-
-  // useEffect(() => {
-  //   element.current?.style.setProperty(
-  //     "--glow-top",
-  //     `${element.current?.offsetTop}px`
-  //   );
-  //   element.current?.style.setProperty(
-  //     "--glow-left",
-  //     `${element.current?.offsetLeft}px`
-  //   );
-  // }, []);
 
   return (
     <div ref={element} className={cn("relative", className)}>

@@ -15,8 +15,6 @@ import GlowArea, { Glow } from "@/components/glow-area";
 import ThemeToggle from "@/components/theme-toggle";
 
 export default function Home() {
-  const { setTheme } = useTheme();
-
   const pricingPlans = [
     {
       name: "Free",
